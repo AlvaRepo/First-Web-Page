@@ -1,0 +1,110 @@
+/* PALETAS */
+
+* { 
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    user-select: none;
+}
+.title {
+    background: #222;
+    padding: 10px;
+    color: #bbb;
+    text-align: center;
+       }
+
+.backMenu {
+    background: #333;
+    color: #bbb;
+    display: block;
+    z-index: 3;  
+    
+}
+.btnMenu {
+    display: none;
+}
+.deployableMenu {
+    background: #333;
+    color: white;
+}
+.deployableMenu:hover {
+    background: #333;
+    color: #faa;  /*cambia color de icono*/
+}        
+
+.menu , .submenu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+.menu{
+    background-color:#555;
+    margin-top: 0;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.menu__link , .project__link{
+    padding: 15px;
+    color: #bbb;
+    font-size: 1.4em;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    }
+    .container-submenu {
+        position: relative;
+    }
+
+    .menubtn {        
+        cursor:pointer;
+     }
+    .submenu {
+        background: #555;
+        padding-left: 10px;
+        visibility: hidden;
+        position: absolute;
+        opacity: .0;
+             }
+    .submenuClicked {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity .2s;
+             }
+     
+
+    @media(max-width:1024px){
+        .btnMenu {
+            background: #333;
+            color: #bbb;
+            padding: 10px;
+            display: block;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.8em;
+            
+        }
+               
+        .menu{
+            background-color: #555;
+            margin-top: 0;
+            display: block;
+            align-content: stretch;
+            
+            position: absolute;
+        }
+
+        .submenu {
+            position: absolute;
+            overflow: visible;
+            justify-content: space-evenly;
+        }
+        .submenuClicked {
+            position: relative;
+        }
+
+    }
