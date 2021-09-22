@@ -1,110 +1,111 @@
 /* PALETAS */
 
 * { 
-    box-sizing: border-box;
-    margin:0;
-    padding:0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    user-select: none;
+box-sizing: border-box;
+margin:0;
+padding:0;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+user-select: none;
 }
 .title {
-    background: #222;
-    padding: 10px;
-    color: #bbb;
-    text-align: center;
-       }
+font-weight:500;
+color: #bbb;
+background: #333;  
+padding: 10px;
+text-align: center;
+    }
 
-.backMenu {
-    background: #333;
-    color: #bbb;
-    display: block;
-    z-index: 3;  
-    
-}
+
 .btnMenu {
-    display: none;
+display: none;
 }
-.deployableMenu {
-    background: #333;
-    color: white;
-}
-.deployableMenu:hover {
-    background: #333;
-    color: #faa;  /*cambia color de icono*/
-}        
+
 
 .menu , .submenu {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+padding: 0;
+margin: 0;
+list-style: none;
 
 }
 .menu{
-    background-color:#555;
-    margin-top: 0;
-    display: flex;
-    align-items: stretch;
-    justify-content: space-evenly;
-    position: relative;
+background-color:#555;
+margin-top: 0;
+display: flex;
+align-items: stretch;
+justify-content: space-evenly;
+position: relative;
+
+}
+.menu__item {
+position: relative;
+
+
+}
+.menu__link , .project__link{
+padding: 18px;
+color: #bbb;
+font-size: 1.4em;
+text-decoration: none;
+display: block;
+width: 100%;
+
 }
 
-.menu__link , .project__link{
-    padding: 15px;
-    color: #bbb;
-    font-size: 1.4em;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    }
-    .container-submenu {
-        position: relative;
-    }
+.container-submenu {
+position: relative;
+}
 
-    .menubtn {        
-        cursor:pointer;
-     }
-    .submenu {
-        background: #555;
-        padding-left: 10px;
+.menubtn {        
+cursor: pointer;
+}
+.submenu {
+display: none;
+background: #555;
+position: absolute;
+}
+.subMenuClicked {
+    display: inherit;
+}
+
+
+@media(max-width:1024px){
+
+    .btnMenu {
+        background-color:#555;
+        color: #bbb;
+        padding: 10px;
+        display: block;
+        cursor: pointer;
+        width: 100%;
+        font-size: 1.8em;
+        cursor: pointer;
+    }
+            
+    .menu{
         visibility: hidden;
-        position: absolute;
-        opacity: .0;
-             }
-    .submenuClicked {
+        background-color:#666;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+        position: relative;
+        width: 230px;
+    }
+    .responsiveMenuClicked{
         visibility: visible;
-        opacity: 1;
-        transition: opacity .2s;
-             }
-     
+    }
 
-    @media(max-width:1024px){
-        .btnMenu {
-            background: #333;
-            color: #bbb;
-            padding: 10px;
-            display: block;
-            cursor: pointer;
-            width: 100%;
-            font-size: 1.8em;
-            
-        }
-               
-        .menu{
-            background-color: #555;
-            margin-top: 0;
-            display: block;
-            align-content: stretch;
-            
-            position: absolute;
-        }
-
-        .submenu {
-            position: absolute;
-            overflow: visible;
-            justify-content: space-evenly;
-        }
-        .submenuClicked {
-            position: relative;
-        }
+    .submenu {
+        position: absolute;
+        justify-content: center;
+        width: 170px;
+        left: 180px;
+        align-items:center;
+        z-index: 1;
 
     }
+    .submenuClicked {
+        position:relative;
+        
+    }
+
+}
